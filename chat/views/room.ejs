@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-9">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+        <form action='/room' method="POST">
+            <div>
+                <input name='title' placeholder="title">
+            </div>
+            <div>
+                <input name="max" type="number" placeholder="최대 인원(최소 2명)">
+            </div>
+            <div>
+                <input name="password" type="password" placeholder="password">
+            </div>
+            <div>
+                <button type="submit">생성</button>
+            </div>
+        </form>
+  </body>
+</html>
