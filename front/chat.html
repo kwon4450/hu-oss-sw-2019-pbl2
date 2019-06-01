@@ -14,6 +14,14 @@
             margin:0 auto;
             border-radius: 16px;
         }
+        #userlist{
+            width: 200px;
+            height: 930px;
+            border: 5px solid gray;
+            background: white;
+            margin:0 auto;
+            border-radius: 16px;
+        }
         #chatView {
             height: 94%;
             overflow-y: scroll;
@@ -26,7 +34,7 @@
         #msg {
             width: 80%;
             height: 40px;
-            border-radius: 8px;
+            border-radius: 100px;
         }
         #send {
             width: 16%;
@@ -38,13 +46,19 @@
     </style>
 </head>
 <body background = "C:\Users\MSI\Desktop\sky.jpg">
-    <div id="container">
+    <div id="container" style="float:left">
         <div id="chatView">
         </div>
         <form id="chatForm" onsubmit="return false">
             <input type="text" id="msg">
             <input type="submit" id="send" value="전송">
         </form>
+    </div>
+    <div id = "userlist" style="float: left">
+        <span style = " font-size:1.5em;">
+        Userlist
+        </span>
+        
     </div>
 
 
