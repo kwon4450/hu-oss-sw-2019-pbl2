@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 800px;
+            height: 930px;
+            border: 5px solid gray;
+            background: lightsteelblue;
+            margin:0 auto;
+            border-radius: 16px;
+        }
+        #userlist{
+            width: 200px;
+            height: 930px;
+            border: 5px solid gray;
+            background: white;
+            margin:0 auto;
+            border-radius: 16px;
+        }
+        #chatView {
+            height: 94%;
+            overflow-y: scroll;
+        }
+        #chatForm {
+            height: 10%;
+            border-top: 1px solid black;
+            text-align: center;
+        }
+        #msg {
+            width: 80%;
+            height: 40px;
+            border-radius: 100px;
+        }
+        #send {
+            width: 16%;
+            height: 34px;
+            border-radius: 50px;
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body background = "C:\Users\MSI\Desktop\sky.jpg">
+    <div id="container" style="float:left">
+        <div id="chatView">
+        </div>
+        <form id="chatForm" onsubmit="return false">
+            <input type="text" id="msg">
+            <input type="submit" id="send" value="전송">
+        </form>
+    </div>
+    <div id = "userlist" style="float: left">
+        <span style = " font-size:1.5em;">
+        Userlist
+        </span>
+        
+    </div>
+
+
+</body>
+</html>
