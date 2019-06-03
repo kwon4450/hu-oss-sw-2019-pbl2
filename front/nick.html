@@ -18,22 +18,39 @@
             width: 300px;
             height: 60px;
             border-radius: 8px;
+            margin-bottom: 30px;
+            margin-left:250px;
         }
-        #send {
+        #sign {
             width: 100px;
             height: 50px;
             border-radius: 50px;
             background: black;
             color: white;
+            margin-left:350px;
+
         }
     </style>
 </head>
 <body>
     <div id="container">
-        <form>
-            <input type="text" id="nickname" value = "익명" style="text-align:center; font-size:20px;">
-            <input type="button" id="send" value="접속" onclick="location.href='roomlist.html'">
-        </form>
+      <form action='/room' method="POST">
+        <div>
+          <input name='title' placeholder="title" id = "nickname" style="text-align:center; font-size:20px; margin-top: 280px;">
+        </div>
+        <div>
+          <input name="max" type="number" id = "nickname" placeholder="최대 인원(최소 2명)" style="text-align:center; font-size:20px;">
+        </div>
+        <div>
+          <input name="password" type="password" id = "nickname" placeholder="password">
+        </div>
+        <div>
+          <input name="master" type="hidden" value=<%= nick %>
+        </div>
+        <div>
+          <input type="submit" id = "sign" value = "생성">
+        </div>
+      </form>
     </div>
 </body>
 </html>

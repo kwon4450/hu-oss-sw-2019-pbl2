@@ -22,18 +22,22 @@ a {
   border: 5px solid gray;
   background: lightsteelblue;
   border-radius: 16px;
+  margin: 0 auto;
 }
 #nickname {
   width: 300px;
   height: 60px;
   border-radius: 8px;
+  margin-bottom: 30px;
+  margin-left:250px;
 }
-#send {
+#sign {
   width: 100px;
   height: 50px;
   border-radius: 50px;
   background: black;
   color: white;
+  margin-left:350px;
 }
 
 #userlist{
@@ -64,4 +68,11 @@ a {
   border-radius: 50px;
   background: black;
   color: white;
+}
+#exit {
+    width: 50%;
+    height: 50px;
+    border-radius: 50px;
+    background: black;
+    color: white;
 }

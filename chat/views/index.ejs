@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-9">
@@ -9,15 +9,18 @@
     <div id="container" style="float:left">
 
       <form action="/login" method="POST">
-        <div>
-          <input name="username" type="text" placeholder="id">
-        </div>
-        <div>
-          <input name="password" type="password" placeholder="password">
-        </div>
-        <div>
-          <button type="submit">sign in</button><button>sign up</button>
-        </div>
+        <form action="/login" method="POST">
+          <div>
+            <input name="username" type="text" placeholder="id" id="nickname" style="text-align:center; font-size:20px; margin-top: 280px;">
+          </div>
+          <div>
+            <input name="password" type="text" placeholder="password" id="nickname" style="text-align:center; font-size:20px;">
+          </div>
+          <div>
+            <input type="submit" id = "sign" value = "sign in">
+            <input type="button" id = "sign" value = "sign up" style = "margin-top:20px;">
+          </div>
+        </form>
       </form>
     </div>
   </body>
