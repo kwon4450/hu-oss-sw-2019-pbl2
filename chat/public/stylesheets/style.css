@@ -6,6 +6,15 @@ body {
 a {
   color: #00B7FF;
 }
+#container2 {
+    float: left;
+    width: 800px;
+    height: 930px;
+    border: 5px solid gray;
+    background: lightsteelblue;
+    margin-left:548px;
+    border-radius: 16px;
+}
 
 #container {
   width: 800px;
