@@ -9,7 +9,7 @@ a {
 #container2 {
     float: left;
     width: 800px;
-    height: 930px;
+    height: 880px;
     border: 5px solid gray;
     background: lightsteelblue;
     margin-left:548px;
@@ -18,7 +18,7 @@ a {
 
 #container {
   width: 800px;
-  height: 930px;
+  height: 880px;
   border: 5px solid gray;
   background: lightsteelblue;
   border-radius: 16px;
@@ -41,11 +41,11 @@ a {
 }
 
 #userlist{
+  float: left;
   width: 200px;
-  height: 930px;
+  height: 880px;
   border: 5px solid gray;
   background: white;
-  margin:0 auto;
   border-radius: 16px;
 }
 #chatView {
