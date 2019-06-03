@@ -3,8 +3,6 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const { Types: { ObjectId } } = Schema;
 
-const max_number = 5;
-
 const roomSchema = new Schema({
     title: {
     type: String,
@@ -13,12 +11,13 @@ const roomSchema = new Schema({
     max: {
         type: Number,
         required: true,
-        default: max_number,
+        default: 10,
         min: 2,
     },
     master: {
-        type: String,
+        type: ObjectId,
         required: true,
+        ref: 'User', 
     },
     password: String,
     createdAt: {
