@@ -6,3 +6,53 @@ body {
 a {
   color: #00B7FF;
 }
+
+#container {
+  width: 800px;
+  height: 930px;
+  border: 5px solid gray;
+  background: lightsteelblue;
+  border-radius: 16px;
+}
+#nickname {
+  width: 300px;
+  height: 60px;
+  border-radius: 8px;
+}
+#send {
+  width: 100px;
+  height: 50px;
+  border-radius: 50px;
+  background: black;
+  color: white;
+}
+
+#userlist{
+  width: 200px;
+  height: 930px;
+  border: 5px solid gray;
+  background: white;
+  margin:0 auto;
+  border-radius: 16px;
+}
+#chatView {
+  height: 94%;
+  overflow-y: scroll;
+}
+#chatForm {
+  height: 10%;
+  border-top: 1px solid black;
+  text-align: center;
+}
+#msg {
+  width: 80%;
+  height: 40px;
+  border-radius: 100px;
+}
+#send {
+  width: 16%;
+  height: 34px;
+  border-radius: 50px;
+  background: black;
+  color: white;
+}
