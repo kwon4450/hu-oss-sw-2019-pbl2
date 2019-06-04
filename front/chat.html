@@ -18,10 +18,9 @@
         #userlist{
             float: left;
             width: 200px;
-            height: 880px;
+            height: 93%;
             border: 5px solid gray;
             background: white;
-            border-radius: 16px;
         }
         #chatView {
             height: 94%;
@@ -56,21 +55,23 @@
 </head>
 <body background = "C:\Users\MSI\Desktop\sky.jpg">
     <div id="container2">
+        <div id = "userlist" style="float: right">
+                <span style = " font-size:1.5em;">
+                Userlist
+                </span>
+                <form>
+                    <input type="button" id="exit" value="나가기" onclick="location.href='roomlist.html'">
+                </form>
+        </div>
         <div id="chatView">
         </div>
         <form id="chatForm" onsubmit="return false">
             <input type="text" id="msg">
             <input type="submit" id="send" value="전송">
         </form>
+        
     </div>
-    <div id = "userlist">
-        <span style = " font-size:1.5em;">
-        Userlist
-        </span>
-        <form>
-            <input type="button" id="exit" value="나가기" onclick="location.href='roomlist.html'">
-        </form>
-    </div>
+    
 
 
 </body>
