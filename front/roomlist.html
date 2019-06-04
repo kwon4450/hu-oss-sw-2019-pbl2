@@ -34,14 +34,28 @@
             background: white;
             border-radius: 16px;
         }
+        #username{
+            float : left;
+            width : 130px;
+            height: 30px;
+            border: 5px solid gray;
+            background: white;
+            border-radius: 16px;
+        }
+        #roomlist{
+            float : left;
+            width : 590px;
+            height: 30px;
+            border: 5px solid gray;
+            background: white;
+        }
     </style>
 </head>
 <body>
     <div id="container">
-        <h style="font-size: 30px">Room List</h>
         <div id = "userlist">
-            <div>
-                <h>user id = </h>
+            <div id = "username">
+                <h>user id :</h>
             </div>
             <span style = " font-size:1.5em; display: inline-block">
             Userlist
@@ -50,6 +64,7 @@
                 <input type="button" id="exit" value="나가기" onclick="location.href='nick.html'">
             </form>
         </div>
+        <h style="font-size: 30px">Room List</h>
 
         <div>
             <div id="room">
