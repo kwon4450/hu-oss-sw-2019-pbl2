@@ -19,7 +19,7 @@
             overflow-y: scroll;
         }
         #room {
-            width: 70%;
+            width: 77.50%;
             height: 50px;
             border: 5px solid gray;
             background: white;
@@ -28,27 +28,26 @@
             float: left;
         }
         #userlist{
-            float: left;
-            width: 160px;
-            height: 880px;
-            border: 5px solid gray;
-            background: white;
-            border-radius: 16px;
+          float: right;
+          width: 165px;
+          height: 99.5%;
+          border: 2px solid gray;
+          background: white;
+          border-radius: 10px;
         }
         #username{
-            float : left;
-            width : 130px;
+
+            width : 100%;
             height: 30px;
-            border: 5px solid gray;
+            border-bottom: 2px solid gray;
             background: white;
-            border-radius: 16px;
+
         }
         #roomlist{
-            float : left;
-            width : 300px;
-            height: 30px;
-            border: 1px solid gray;
-            background: yellow;
+            width : 80%;
+            height: 50px;
+            border-bottom: 2px solid gray;
+            background: lightsteelblue;
             text-align: center;
         }
         #send {
@@ -72,6 +71,7 @@
         #roomatt{
             float: left;
             width: 20%;
+            text-align: center;
         }
     </style>
 </head>
@@ -89,11 +89,11 @@
             </form>
         </div>
         <div id="roomlist">
-        <h style="font-size: 30px;font-family:fantasy;text-align: center">Room List</h>
-        <button type = "button" onclick="location.href='chat.html'" id="send">방만들기</button>
-        </div>      
+          <h style="font-size: 30px;font-family:fantasy;text-align: center">Room List</h>
+          <button type = "button" onclick="location.href='chat.html'" id="send">방만들기</button>
+        </div>
         <div>
-            <div id="room">
+            <div id="roomlist">
                 <div id="roomatt">방제</div>
                 <div id="roomatt">현/총</div>
                 <div id="roomatt">방장</div>
