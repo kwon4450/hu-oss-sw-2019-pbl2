@@ -45,10 +45,11 @@
         }
         #roomlist{
             float : left;
-            width : 590px;
+            width : 300px;
             height: 30px;
-            border: 5px solid gray;
-            background: white;
+            border: 1px solid gray;
+            background: yellow;
+            text-align: center;
         }
         #send {
             width: 100px;
@@ -57,6 +58,15 @@
             background: brown;
             color: white;
             float: right;
+        }
+        #title {
+            width: 78.7%;
+            height: 50px;
+            background: yellow;
+            margin:0 auto;
+            float: left;
+            border-radius: 16px;
+            position:static;
         }
     </style>
 </head>
@@ -73,8 +83,9 @@
                 <input type="button" id="exit" value="나가기" onclick="location.href='nick.html'">
             </form>
         </div>
-        <h style="font-size: 30px;font-family:fantasy;float:inherit">Room List</h>
-
+        <div id="roomlist">
+        <h style="font-size: 30px;font-family:fantasy;text-align: center">Room List</h>
+        </div>      
         <div>
             <div id="room">
                 1번방
