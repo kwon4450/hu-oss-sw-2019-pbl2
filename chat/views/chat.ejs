@@ -5,22 +5,23 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css'/>
   </head>
-  <body>
-    <div id="container">
-        <div id="chatView">
-        </div>
-        <form id="chatForm" onsubmit="return false">
-            <input type="text" id="msg">
-            <input type="submit" id="send" value="전송">
-        </form>
-    </div>
-    <div id = "userlist">
-        <span style = " font-size:1.5em;">
-        Userlist
-        </span>
-        <form>
-            <input type="button" id="exit" value="나가기">
-        </form>
-    </div>
-  </body>
+  <body background = "C:\Users\MSI\Desktop\sky.jpg">
+      <div id="container">
+          <div id = "userlist_chat">
+                  <span style = " font-size:1.5em;">
+                  Userlist
+                  </span>
+                  <form>
+                      <input type="button" id="exit" value="나가기" onclick="location.href='roomlist.html'">
+                  </form>
+          </div>
+          <div id="chatView">
+          </div>
+          <form id="chatForm" onsubmit="return false">
+              <input type="text" id="msg">
+              <input type="submit" id="send" value="전송">
+          </form>
+  
+      </div>
+  </body>  
 </html>

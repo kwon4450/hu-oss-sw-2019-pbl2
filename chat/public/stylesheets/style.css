@@ -15,11 +15,12 @@ a {
   border-radius: 16px;
 }
 
-#container {
+#container{
   width: 800px;
-  height: 930px;
+  height: 880px;
   border: 5px solid gray;
   background: lightsteelblue;
+  margin: 0 auto;
   border-radius: 16px;
 }
 #nickname {
@@ -35,13 +36,21 @@ a {
   color: white;
 }
 
-#userlist{
+#userlist_chat{
+  float: right;
   width: 200px;
-  height: 930px;
-  border: 5px solid gray;
+  height: 93.5%;
+  border: 2px solid gray;
   background: white;
-  margin:0 auto;
-  border-radius: 16px;
+  border-radius: 10px;
+}
+#userlist_roomlist{
+  float: right;
+  width: 165px;
+  height: 99.5%;
+  border: 2px solid gray;
+  background: yellow;
+  border-radius: 10px;
 }
 #chatView {
   height: 94%;
@@ -58,11 +67,12 @@ a {
   border-radius: 100px;
 }
 #send {
-  width: 16%;
-  height: 34px;
+  width: 100px;
+  height: 50px;
   border-radius: 50px;
-  background: black;
+  background: brown;
   color: white;
+  float: right;
 }
 #username{
   float : left;
@@ -74,9 +84,32 @@ a {
 }
 
 #roomlist{
-  float : left;
-  width : 590px;
-  height: 30px;
-  border: 5px solid gray;
-  background: white;
+  width : 80%;
+  height: 50px;
+  border-bottom: 2px solid gray;
+  background: lightsteelblue;
+  text-align: center;
+}
+
+#exit {
+  width: 50%;
+  height: 50px;
+  border-radius: 50px;
+  background: black;
+  color: white;
+}
+
+#title {
+  width: 78.7%;
+  height: 50px;
+  background: yellow;
+  margin:0 auto;
+  float: left;
+  border-radius: 16px;
+  position:static;
+}
+#roomatt{
+  float: left;
+  width: 20%;
+  text-align: center;
 }
