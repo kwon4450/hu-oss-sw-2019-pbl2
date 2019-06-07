@@ -15,15 +15,14 @@
           Userlist
 
           </span>
-    </div>
-      <div id="chatview">
+        </div>
+
         <div id="chat"></div>
-        <div class="msg">
-          <input type="hidden" id="nick" value=<%= nick %> >
-          <input type="text" id="input" placeholder="" onkeyup="enter()">
+        <div id = "chatForm" class="msg">
+          <input type="hidden" id="nick" value=nick >
+          <input type="text" id="msg" placeholder="" onkeyup="enter()">
           <button id="send" onclick="submit()">전송</button>
         </div>
-      </div>
     </div>
   </body>
 </html>

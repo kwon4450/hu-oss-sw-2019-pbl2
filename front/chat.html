@@ -6,73 +6,97 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        #container{
-            width: 800px;
-            height: 880px;
-            border: 5px solid gray;
-            background: lightsteelblue;
-            margin: 0 auto;
-            border-radius: 16px;
-        }
-        #userlist{
-            float: right;
-            width: 200px;
-            height: 93.5%;
-            border: 2px solid gray;
-            background: white;
-            border-radius: 10px;
-        }
-        #chatView {
-            height: 94%;
-            overflow-y: scroll;
-        }
-        #chatForm {
-            height: 10%;
-            border-top: 1px solid black;
-            text-align: center;
-        }
-        #msg {
-            width: 80%;
-            height: 40px;
-            border-radius: 100px;
-        }
-        #send {
-            width: 16%;
-            height: 34px;
-            border-radius: 50px;
-            background: black;
-            color: white;
+    #container {
+      width: 800px;
+      height: 880px;
+      border: 5px solid gray;
+      background: lightsteelblue;
+      border-radius: 16px;
+    }
+    #chat {
+      float: left;
+      border: 2px solid gray;
+      border-radius: 10px;
+      background-color: #fdfbfb;
+      text-align: center;
+      width: 73%;
+      height: 93%;
+      overflow: auto;
+    }
 
-        }
-        #exit {
-            width: 50%;
-            height: 50px;
-            border-radius: 50px;
-            background: black;
-            color: white;
-        }
+    #nickname {
+      width: 300px;
+      height: 60px;
+      border-radius: 8px;
+    }
+
+    #send {
+      width: 100px;
+      height: 50px;
+      border-radius: 50px;
+      background: black;
+      color: white;
+    }
+
+    #userlist_chat{
+      float: right;
+      width: 200px;
+      height: 93%;
+      border: 2px solid gray;
+      background: white;
+      border-radius: 10px;
+    }
+
+    #chatView {
+      height: 94%;
+      overflow-y: scroll;
+    }
+
+    #chatForm {
+      height: 10%;
+      border-top: 1px solid black;
+      text-align: center;
+    }
+
+    #msg {
+      width: 80%;
+      height: 40px;
+      border-radius: 100px;
+    }
+
+    #username{
+      float : left;
+      width : 130px;
+      height: 30px;
+      border: 5px solid gray;
+      background: white;
+      border-radius: 16px;
+    }
+
+    #exit {
+      width: 50%;
+      height: 50px;
+      border-radius: 50px;
+      background: black;
+      color: white;
+    }
     </style>
 </head>
-<body background = "C:\Users\MSI\Desktop\sky.jpg">
-    <div id="container">
-        <div id = "userlist">
-                <span style = " font-size:1.5em;">
-                Userlist
-                </span>
-                <form>
-                    <input type="button" id="exit" value="나가기" onclick="location.href='roomlist.html'">
-                </form>
-        </div>
-        <div id="chatView">
-        </div>
-        <form id="chatForm" onsubmit="return false">
-            <input type="text" id="msg">
-            <input type="submit" id="send" value="전송">
-        </form>
+<body>
+  <div id="container">
+      <div id = "userlist_chat">
+        <span style = " font-size:1.5em;">
+        Userlist
 
-    </div>
+        </span>
+      </div>
 
-
-
+      <div id="chat"></div>
+      <div id = "chatForm" class="msg">
+        <input type="hidden" id="nick" value=nick >
+        <input type="text" id="msg" placeholder="" onkeyup="enter()">
+        <button id="send" onclick="submit()">전송</button>
+      </div>
+  </div>
 </body>
 </html>
