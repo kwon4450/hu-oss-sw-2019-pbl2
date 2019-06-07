@@ -10,11 +10,19 @@
   </head>
   <body>
     <div id="container">
-      <div id="chat"></div>
-      <div class="msg">
-        <input type="hidden" id="nick" value=<%= nick %> >
-        <input type="text" id="input" placeholder="" onkeyup="enter()">
-        <button id="send" onclick="submit()">전송</button>
+        <div id = "userlist_chat">
+          <span style = " font-size:1.5em;">
+          Userlist
+
+          </span>
+    </div>
+      <div id="chatview">
+        <div id="chat"></div>
+        <div class="msg">
+          <input type="hidden" id="nick" value=<%= nick %> >
+          <input type="text" id="input" placeholder="" onkeyup="enter()">
+          <button id="send" onclick="submit()">전송</button>
+        </div>
       </div>
     </div>
   </body>
