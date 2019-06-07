@@ -6,51 +6,111 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        #container {
-            width: 800px;
-            height: 880px;
-            margin: 0 auto;
-            border: 5px solid gray;
-            background: lightsteelblue;
-            border-radius: 16px;
-        }
-        #nickname {
-            width: 300px;
-            height: 60px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            margin-left:250px;
-        }
-        #sign {
-            width: 100px;
-            height: 50px;
-            border-radius: 50px;
-            background: black;
-            color: white;
-            margin-left:350px;
+    #container {
+      width: 800px;
+      height: 880px;
+      border: 5px solid gray;
+      background: lightsteelblue;
+      border-radius: 16px;
+    }
+    #chat {
+      float: left;
+      border: 2px solid gray;
+      border-radius: 10px;
+      background-color: #fdfbfb;
+      text-align: center;
+      width: 73%;
+      height: 93%;
+      overflow: auto;
+    }
 
-        }
+    #nickname {
+      margin-left: 25% ;
+      width: 400px;
+      height: 60px;
+      border-radius: 8px;
+      margin-bottom: 20px ;
+    }
+
+    #send {
+      width: 100px;
+      height: 50px;
+      border-radius: 50px;
+      background: black;
+      color: white;
+    }
+    #sign {
+      margin-left: 44% ;
+      width: 100px;
+      height: 50px;
+      border-radius: 50px;
+      background: black;
+      color: white;
+    }
+
+    #userlist_chat{
+      float: right;
+      width: 200px;
+      height: 93%;
+      border: 2px solid gray;
+      background: white;
+      border-radius: 10px;
+    }
+
+    #chatView {
+      height: 94%;
+      overflow-y: scroll;
+    }
+
+    #chatForm {
+      height: 10%;
+      border-top: 1px solid black;
+      text-align: center;
+    }
+
+    #msg {
+      width: 80%;
+      height: 40px;
+      border-radius: 100px;
+    }
+
+    #username{
+      float : left;
+      width : 130px;
+      height: 30px;
+      border: 5px solid gray;
+      background: white;
+      border-radius: 16px;
+    }
+
+    #exit {
+      width: 50%;
+      height: 50px;
+      border-radius: 50px;
+      background: black;
+      color: white;
+    }
     </style>
 </head>
 <body>
-    <div id="container">
-      <form action='/room' method="POST">
-        <div>
-          <input name='title' placeholder="title" id = "nickname" style="text-align:center; font-size:20px; margin-top: 280px;">
-        </div>
-        <div>
-          <input name="max" type="number" id = "nickname" placeholder="최대 인원(최소 2명)" style="text-align:center; font-size:20px;">
-        </div>
-        <div>
-          <input name="password" type="password" id = "nickname" placeholder="password">
-        </div>
-        <div>
-          <input name="master" type="hidden" value=<%= nick %>
-        </div>
-        <div>
-          <input type="submit" id = "sign" value = "생성">
-        </div>
-      </form>
-    </div>
+  <div id="container">
+    <form action="/join" method="POST">
+      <div>
+        <input name="username" type="text" placeholder="id" id="nickname" style="text-align:center; font-size:20px; margin-top: 250px;">
+      </div>
+      <div>
+        <input name="password" type="password" placeholder="password" id="nickname" style="text-align:center; font-size:20px;">
+      </div>
+      <div>
+        <input name="password_check" type="password" id="nickname" placeholder="password_check" style="text-align:center; font-size:20px;">
+      </div>
+      <div>
+        <input name="nick" type="text" placeholder="nickname" id="nickname" style="text-align:center; font-size:20px;">
+      </div>
+      <div>
+        <button type="submit" id = "sign">sign up</button>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
