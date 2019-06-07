@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const { NODE_ENV } = process.env;
-const MONGO_ID = '아이디';
-const MONGO_PASSWORD = '비밀번호';
+const MONGO_ID = 'root';
+const MONGO_PASSWORD = '1234';
 const MONGO_URL = `mongodb://${MONGO_ID}:${MONGO_PASSWORD}@localhost:27017/admin`;
 
 module.exports = () => {
@@ -31,6 +31,5 @@ module.exports = () => {
   });
 
   require('./chat');
-  require('./room');
   require('./user');
 };

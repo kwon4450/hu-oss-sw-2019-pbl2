@@ -6,22 +6,22 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <div id="container">
-      <form action="/join" method="POST">
-        <div>
-          <input name="username" type="text" placeholder="id" id="nickname" style="text-align:center; font-size:20px; margin-top: 280px;">
-        </div>
-        <div>
-          <input name="password" type="text" placeholder="password" id="nickname" style="text-align:center; font-size:20px;">
-        </div>
-        <div>
-          <input name="nick" type="text" placeholder="nickname" id="nickname" style="text-align:center; font-size:20px;">
-        </div>
-        <div>
-          <input type="submit" id = "sign" value = "sign up">
-        </div>
-      </form>
-    </div>
-
+    <form action="/join" method="POST">
+      <div>
+        <input name="username" type="text" id="input" placeholder="id">
+      </div>
+      <div>
+        <input name="password" type="password" id="input" placeholder="password">
+      </div>
+      <div>
+        <input name="password_check" type="password" id="input" placeholder="password_check">
+      </div>
+      <div>
+        <input name="nick" type="text" id="input" placeholder="nickname">
+      </div>
+      <div>
+        <button type="submit">sign up</button>
+      </div>
+    </form>
   </body>
 </html>

@@ -3,7 +3,6 @@ const passport = require('passport');
 const bcrypt = require('bcrypt-nodejs');
 const { isLoggedIn, isNotLoggedIn } = require('./loginCheck');
 
-const Room = require('../schemas/room');
 const Chat = require('../schemas/chat');
 const User = require('../schemas/user');
 
@@ -18,12 +17,16 @@ router.get('/join', isNotLoggedIn, (req, res) => {
 });
 
 router.post('/join', isNotLoggedIn, async (req, res, next) => {
-  const { username, password, nick } = req.body;
+  const { username, password, password_check, nick } = req.body;
   try {
     const exUser = await User.findOne({ username: username});
     console.log(exUser);
     if (exUser) {
       req.flash('joinError', '이미 가입된 유저입니다.');
+      return res.redirect('/join');
+    }
+    if (password != password_check) {
+      req.flash('joinError', '비밀번호가 일치하지 않습니다.');
       return res.redirect('/join');
     }
     bcrypt.genSalt(10, (error, salt) => {
@@ -51,24 +54,16 @@ router.post('/join', isNotLoggedIn, async (req, res, next) => {
   }
 });
 
-
-router.get('/', (req, res, next) => {
+router.get('/', isNotLoggedIn, (req, res, next) => {
   res.render('index', {
     title: '로그인 페이지 - NodeChat',
-  })
-});
-
-router.get('/main', isLoggedIn, (req, res) => {
-  console.log(req.user);
-  res.render('main', {
-    title: '채팅방 목록 - NodeChat',
   })
 });
 
 router.post('/login', isNotLoggedIn, passport.authenticate('local', {
   failureRedirect: '/'
   }), (req, res) => {
-    res.redirect('/main');
+    res.redirect('/chat');
 });
 
 router.get('/logout', isLoggedIn, (req, res) => {
@@ -77,8 +72,11 @@ router.get('/logout', isLoggedIn, (req, res) => {
   res.redirect('/');
 });
 
-router.get('/room', async (req, res, next) => {
-  res.render('index', { title: req.body.title, nick: req.session.nick });
-})
+router.get('/chat', isLoggedIn, (req, res, next) => {
+  res.render('chat', {
+    title: '채팅방 - NodeChat',
+    nick: req.user.nick,
+  });
+});
 
 module.exports = router;

@@ -1,27 +1,21 @@
 <!DOCTYPE html>
-<html lang='ko'>
+<html lang="ko">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-9">
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/socket/client.js"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
   </head>
-  <body background = "C:\Users\MSI\Desktop\sky.jpg">
-      <div id="container">
-          <div id = "userlist_chat">
-                  <span style = " font-size:1.5em;">
-                  Userlist
-                  </span>
-                  <form>
-                      <input type="button" id="exit" value="나가기" onclick="location.href='roomlist.html'">
-                  </form>
-          </div>
-          <div id="chatView">
-          </div>
-          <form id="chatForm" onsubmit="return false">
-              <input type="text" id="msg">
-              <input type="submit" id="send" value="전송">
-          </form>
-  
+  <body>
+    <div id="container">
+      <div id="chat"></div>
+      <div class="msg">
+        <input type="hidden" id="nick" value=<%= nick %> >
+        <input type="text" id="input" placeholder="" onkeyup="enter()">
+        <button id="send" onclick="submit()">전송</button>
       </div>
-  </body>  
+    </div>
+  </body>
 </html>
