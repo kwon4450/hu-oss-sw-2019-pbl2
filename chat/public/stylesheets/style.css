@@ -24,23 +24,13 @@ a {
   overflow: auto;
 }
 
-#nickname {
-  margin-left: 25% ;
-  width: 400px;
-  height: 60px;
-  border-radius: 8px;
-  margin-bottom: 20px ;
+#input {
+  height: 40px;
+  border-radius: 100px;
 }
 
+
 #send {
-  width: 100px;
-  height: 50px;
-  border-radius: 50px;
-  background: black;
-  color: white;
-}
-#sign {
-  margin-left: 44% ;
   width: 100px;
   height: 50px;
   border-radius: 50px;
@@ -55,23 +45,6 @@ a {
   border: 2px solid gray;
   background: white;
   border-radius: 10px;
-}
-
-#chatView {
-  height: 94%;
-  overflow-y: scroll;
-}
-
-#chatForm {
-  height: 10%;
-  border-top: 1px solid black;
-  text-align: center;
-}
-
-#msg {
-  width: 80%;
-  height: 40px;
-  border-radius: 100px;
 }
 
 #username{

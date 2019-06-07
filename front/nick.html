@@ -24,23 +24,14 @@
       overflow: auto;
     }
 
-    #nickname {
-      margin-left: 25% ;
-      width: 400px;
-      height: 60px;
-      border-radius: 8px;
-      margin-bottom: 20px ;
+    #input {
+      height: 40px;
+      border-radius: 100px;
+      border: 8px;
     }
 
+
     #send {
-      width: 100px;
-      height: 50px;
-      border-radius: 50px;
-      background: black;
-      color: white;
-    }
-    #sign {
-      margin-left: 44% ;
       width: 100px;
       height: 50px;
       border-radius: 50px;
@@ -55,23 +46,6 @@
       border: 2px solid gray;
       background: white;
       border-radius: 10px;
-    }
-
-    #chatView {
-      height: 94%;
-      overflow-y: scroll;
-    }
-
-    #chatForm {
-      height: 10%;
-      border-top: 1px solid black;
-      text-align: center;
-    }
-
-    #msg {
-      width: 80%;
-      height: 40px;
-      border-radius: 100px;
     }
 
     #username{
@@ -94,23 +68,19 @@
 </head>
 <body>
   <div id="container">
-      <span
-      style="font-size: 80px;
-      font-weight:900;margin-left: 24%">
-          Open Chat
-      </span>
-    <form action="/login" method="POST">
-      <div>
-        <input name="username" type="text" placeholder="id" id="nickname" style="text-align:center; font-size:20px; margin-top: 240px;">
+      <div id = "userlist_chat">
+        <span style = " font-size:1.5em;">
+        Userlist
+
+        </span>
       </div>
-      <div>
-        <input name="password" type="password" placeholder="password" id="nickname" style="text-align:center; font-size:20px;">
+
+      <div id="chat"></div>
+      <div class="msg">
+        <input type="hidden" id="nick" value=<%= nick %>  >
+        <input type="text" id="input" placeholder="" onkeyup="enter()" style="width: 80%">
+        <button id="send" onclick="submit()">전송</button>
       </div>
-      <div>
-        <button type="submit" id="sign">sign in</button>
-        <a href="/join"><button type="button" id="sign">sign up</button></a>
-      </div>
-    </form>
   </div>
 </body>
 </html>
