@@ -1,5 +1,5 @@
 const LocalStrategy = require('passport-local').Strategy;
-const bcrypt = require('bcrypt-nodejs');
+const bcrypt = require('bcrypt');
 
 const User = require('../schemas/user');
 
@@ -19,12 +19,12 @@ module.exports = (passport) => {
             if (result) {
               done(null, user);
             } else {
-              done(null, false, { message: '비번 틀림' });
+              done(null, false, { message: '등록되지 않은 아이디이거나, 아이디 또는 비밀번호를 잘못 입력하셨습니다.' });
             }
           }
         });
       } else {
-        done(null, false, { message: 'id 틀림' });
+        done(null, false, { message: '등록되지 않은 아이디이거나, 아이디 또는 비밀번호를 잘못 입력하셨습니다.' });
       }
 
     } catch (err) {

@@ -6,7 +6,9 @@ const Chat = require('../../../schemas/chat');
 
 module.exports = (server) => {
   const io = SocketIO(server);
-  
+
+  var userList = new Array();
+
   io.on('connection', (socket) => {
     socket.on('rooms', () => {
       socket.emit('rooms', io.sockets.manager.rooms);
@@ -14,12 +16,15 @@ module.exports = (server) => {
 
     socket.on('newUser', (nick) => {
       socket.nick = nick;
-
+      
       io.sockets.emit('login', {
         type: 'connect',
         name: 'SEVER',
-        message: socket.nick + '님이 접속하였습니다.'
+        nick: socket.nick,
+        message: '님이 입장하셨습니다.',
+        userlist: userList
       });
+      userList.push(nick);
     });
 
     socket.on('message', (data) => {
@@ -35,13 +40,14 @@ module.exports = (server) => {
     });
 
     socket.on('disconnect', () => {
-      console.log(socket.nick + '님이 나가셨습니다.');
-
       socket.broadcast.emit('logout', {
         type: 'disconnect',
         name: 'SERVER',
-        message: socket.nick + '님이 나가셨습니다.'
+        nick: socket.nick,
+        message: '님이 퇴장하셨습니다.'
       });
+
+      userList.splice(userList.indexOf(socket.nick),1); 
     });
 
   });

@@ -7,26 +7,29 @@
   </head>
   <body>
     <div id="container" style="border: 3px solid gray;">
-      <span
-      style="font-size: 50px;
-      font-weight:900; margin-left: 18%">
+      <div style="font-size: 50px; font-weight:900; margin-top: 10%; margin-bottom: 0%; text-align: center;">
           Enjoy your chat!
-      </span>
-      <form action="/join" method="POST">
+      </div>
+      <form action="/join" method="POST" style="margin-top: 0%;">
         <div>
-          <input name="username" type="text" placeholder="id" id="input" style="text-align:center; font-size:20px; margin-left: 16%; margin-top: 140px; width: 400px">
+          <input name="username" type="text" placeholder="id" minlength="5" maxlength="20" id="input" style="text-align:center; font-size:20px; margin-left: 16%; margin-top: 100px; width: 400px">
         </div>
         <div>
-          <input name="password" type="password" placeholder="password" id="input" style="text-align:center; margin-left: 16%; margin-top: 30px; font-size:20px;width: 400px">
+          <input name="password" type="password" placeholder="password" minlength="8" maxlength="16" id="input" style="text-align:center; margin-left: 16%; margin-top: 30px; font-size:20px;width: 400px">
         </div>
         <div>
-          <input name="password_check" type="password" id="input" placeholder="password_check" style="text-align:center; margin-left: 16%; margin-top: 30px; font-size:20px;width: 400px">
+          <input name="password_check" type="password" id="input" placeholder="password-check" minlength="8" maxlength="16" style="text-align:center; margin-left: 16%; margin-top: 30px; font-size:20px;width: 400px">
         </div>
         <div>
-          <input name="nick" type="text" placeholder="nickname" id="input" style="text-align:center; margin-left: 16%; margin-top: 30px;margin-bottom: 50px; font-size:20px;width: 400px">
+          <input name="nick" type="text" placeholder="nickname(2~7)" minlength="2" maxlength="7" id="input" style="text-align:center; margin-left: 16%; margin-top: 30px;margin-bottom: 30px; font-size:20px;width: 400px">
         </div>
         <div>
           <button type="submit" id = "send" style="margin-left: 44%">sign up</button>
+        </div>
+        <div style="color: red; font-weight: 600; margin-top: 5%; text-align: center;">
+            <% if (joinError) { %>
+            <%= joinError %>
+            <% } %>
         </div>
       </form>
     </div>

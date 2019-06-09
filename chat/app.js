@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const passport = require('passport');
 const passportConfig = require('./passport');
+require('dotenv').config();
 
 const webSocket = require('./public/js/socket/server');
 const indexRouter = require('./routes/index');
@@ -15,7 +16,7 @@ const app = express();
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.set('port', process.env.PORT || 8080);
+app.set('port', process.env.PORT || 8000);
 
 const sessionMiddleware = session({
   secret: 'chatsecret',
