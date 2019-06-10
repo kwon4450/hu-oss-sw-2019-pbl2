@@ -9,7 +9,7 @@ const router = express.Router();
 
 router.get('/join', isNotLoggedIn, (req, res) => {
   res.render('join', {
-    title: '회원가입 - NodeChat',
+    title: '회원가입 - OpenChat',
     user: req.user,
     joinError: req.flash('joinError'),
   });
@@ -44,7 +44,7 @@ router.post('/join', isNotLoggedIn, async (req, res, next) => {
 
 router.get('/', isNotLoggedIn, (req, res) => {
   res.render('index', {
-    title: '로그인 페이지 - NodeChat',
+    title: '로그인 페이지 - OpenChat',
     loginError: req.flash('loginError'),
     joinSuccess: req.flash('joinSuccess'),
   });
@@ -78,7 +78,7 @@ router.get('/logout', isLoggedIn, (req, res) => {
 
 router.get('/chat', isLoggedIn, (req, res) => {
   res.render('chat', {
-    title: '채팅방 - NodeChat',
+    title: '채팅방 - OpenChat',
     nick: req.user.nick,
   });
 });
