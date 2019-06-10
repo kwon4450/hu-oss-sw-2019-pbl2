@@ -1,9 +1,11 @@
 {
   "name": "chat",
   "version": "0.0.0",
+  "main": "main.js",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "node app",
+    "test": "electron ."
   },
   "dependencies": {
     "bcrypt": "^3.0.6",
@@ -15,10 +17,14 @@
     "express": "~4.16.1",
     "express-session": "^1.16.1",
     "http-errors": "~1.6.3",
+    "jquery": "^3.4.1",
     "mongoose": "^5.5.12",
     "morgan": "~1.9.1",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "electron": "^5.0.3"
   }
 }
