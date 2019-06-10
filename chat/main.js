@@ -16,7 +16,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  win.loadURL('http://172.17.64.85:8000')
+  win.loadURL('http://192.168.4.8:8000')
 
 
   // 창이 닫힐 때 발생합니다
