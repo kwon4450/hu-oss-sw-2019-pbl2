@@ -1,17 +1,21 @@
 # hu-oss-sw-2019-pbl2
+## server
+1. clone
+	```bash
+	$ git clone -b server https://github.com/BS00000001/hu-oss-sw-2019-pbl2
+	```
+2. install packages
+	```bash
+	$ npm i
+	```
+3. mongodb setting
+4. modify '.env' file
+5. start mongodb
+	```bash
+	$ mongod (--dbpath=..)
+	```
+6. start server
 
-## 시나리오 요약
-리눅스 운영 도구 및 컨설팅을 공급하는 R사에 속한 우리 팀은, 클라이언트의 요청을 받아 리눅스에서 사용할 수 있는 데스크탑 기반의 채팅 어플리케이션을 개발하는 작업을 진행하게 되었다. 이 어플리케이션은 사용자들이 서로 간단한 소통을 할 수 있게 돕는, 리눅스 데스크탑을 지원하는 어플리케이션이다.
-
-다양한 리눅스 운영체제에서 실행되는 것을 전제로 한 오픈소스 소프트웨어이기에, 쉬운 설치, manpage 및 주요 리눅스 배포판에 설치 가능한 형태의 오픈소스 소프트웨어를 개발해야 한다. 사용자간 채팅을 지원하는 데스크탑 기반의 오픈소스 프로젝트를 개발하고, 배포용 패키지를 공개하라.
-
-
-## 프로젝트를 진행하는 방법
-1. 레포를 클론해온다.
-2. chat폴더로 이동 후 npm i 명령으로 package.json에 있는 모듈을 설치한다.
-3. npm start로 서버를 구동한다.
-4. chat/bin/www 에 설정되어있는 포트번호를 확인하고 localhost:port에 접속한다.
-5. 프론트엔드 역할을 맡은 조원은 chat/public/stylesheets 와 front/ 안에 맡은 부분을 commit 후 push한다.
-6. 백엔드 역할을 맡은 조원은 chat/public/javascript/socket.js등을 수정한다.
-
-* 커밋을 할때는 node_modules 폴더를 삭제하고 커밋을 한다.
+	```bash
+	$ npm start
+	```
