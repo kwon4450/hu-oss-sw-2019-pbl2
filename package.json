@@ -1,0 +1,15 @@
+{
+  "name": "OpenChat",
+  "version": "0.0.1",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . OpenChat"
+  },
+  "devDependencies": {
+    "asar": "^2.0.1",
+    "electron": "^5.0.3",
+    "electron-packager": "^13.1.1"
+  }
+}

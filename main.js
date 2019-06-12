@@ -16,7 +16,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  win.loadURL('http://localhost:8000')
+  win.loadURL('http://localhost:8000')  // 서버 ip로 바꿔줘야 함.
 
 
   // 창이 닫힐 때 발생합니다
